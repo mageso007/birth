@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notre Belle Surprise</title>
+    <title>Mon Amour, Je Suis Désolé</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Désactiver la sélection de texte */
+        /* Styles inchangés... */
         * {
             user-select: none;
             -webkit-user-select: none;
@@ -100,7 +100,6 @@
             z-index: 1;
         }
 
-        /* Header Styles */
         header {
             display: flex;
             justify-content: space-between;
@@ -161,7 +160,6 @@
             gap: 10px;
         }
 
-        /* Hero Section */
         .hero {
             text-align: center;
             padding: 60px 20px;
@@ -278,7 +276,6 @@
             opacity: 1;
         }
 
-        /* Countdown Section */
         .countdown {
             background: rgba(255, 255, 255, 0.8);
             padding: 50px 20px;
@@ -341,7 +338,64 @@
             font-weight: 500;
         }
 
-        /* Gallery Section */
+        .apology {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 50px;
+            margin: 60px 0;
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--card-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark-mode .apology {
+            background: rgba(42, 36, 56, 0.8);
+        }
+
+        .apology::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .apology h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--accent);
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .apology-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .apology-content p {
+            margin-bottom: 25px;
+            padding-left: 30px;
+            position: relative;
+            text-align: center;
+        }
+
+        .apology-content p::before {
+            content: "❤";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
         .gallery-section {
             margin: 60px 0;
         }
@@ -410,7 +464,6 @@
             opacity: 0.9;
         }
 
-        /* Love Letter Section */
         .love-letter {
             background: rgba(255, 255, 255, 0.8);
             border-radius: var(--border-radius);
@@ -468,7 +521,6 @@
             font-size: 1.2rem;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 50px 0 30px;
@@ -489,7 +541,6 @@
             background: linear-gradient(90deg, transparent, var(--accent), transparent);
         }
 
-        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -543,7 +594,6 @@
             }
         }
         
-        /* Music notification */
         .music-notification {
             position: fixed;
             bottom: 20px;
@@ -566,7 +616,6 @@
             to { transform: translateX(0); opacity: 1; }
         }
 
-        /* Responsive Design */
         @media (max-width: 900px) {
             .hero h1 {
                 font-size: 3.2rem;
@@ -652,11 +701,11 @@
                 grid-template-columns: 1fr;
             }
             
-            .love-letter {
+            .love-letter, .apology {
                 padding: 30px 20px;
             }
             
-            .letter-content {
+            .letter-content, .apology-content {
                 font-size: 1rem;
             }
             
@@ -678,7 +727,7 @@
         <header>
             <div class="logo">
                 <i class="fas fa-heart"></i>
-                Notre Futur Bébé
+                Mon Amour
             </div>
             <div class="controls">
                 <button class="theme-toggle" id="themeToggle">
@@ -693,11 +742,11 @@
         </header>
 
         <section class="hero">
-            <h1>Mon amour, j'ai une merveilleuse surprise pour toi...</h1>
-            <p>Dans la vie, les plus belles choses arrivent quand on s'y attend le moins. Aujourd'hui, nous commençons un nouveau chapitre magique de notre histoire d'amour.</p>
+            <h1>Mon amour, je veux te dire quelque chose d'important...</h1>
+            <p>Dans la vie, on fait parfois des erreurs, mais l'important c'est de les reconnaître et de demander pardon. Aujourd'hui, je veux te dire à quel point je t'aime et combien je regrette mes actes.</p>
             
             <div class="reveal-box" id="revealBox">
-                <div class="reveal-text">Clique ici pour découvrir la surprise <i class="fas fa-heart heartbeat"></i></div>
+                <div class="reveal-text">Clique ici pour lire mon message <i class="fas fa-heart heartbeat"></i></div>
             </div>
             
             <!-- Floating hearts -->
@@ -708,8 +757,21 @@
             <div class="heart" style="top: 40%; left: 20%; animation-delay: 4s;">❤</div>
         </section>
 
+        <section class="apology">
+            <h2>Je suis désolé</h2>
+            <div class="apology-content">
+                <p>Ma chérie, je tiens d'abord à te dire que je suis profondément désolé pour mes agissements.</p>
+                <p>Je reconnais pleinement que ce que j'ai fait n'était pas acceptable et qu'il n'y a aucune excuse.</p>
+                <p>Je sais que je t'ai blessée et que j'ai trahi ta confiance, et pour cela, je m'en veux terriblement.</p>
+                <p>Malgré mes erreurs, je veux que tu saches que je t'aime comme un fou, plus que tout au monde.</p>
+                <p>Tu es la personne la plus importante dans ma vie, ma lumière, mon tout.</p>
+                <p>Je ferai tout mon possible pour regagner ta confiance et te prouver que je mérite ta place dans ta vie.</p>
+                <p>S'il te plaît, pardonne-moi. Je t'aime plus que les mots ne peuvent le dire.</p>
+            </div>
+        </section>
+
         <section class="countdown">
-            <h2>Notre bébé arrive dans...</h2>
+            <h2>Notre amour est éternel</h2>
             <div class="timer">
                 <div class="timer-item">
                     <div class="timer-value" id="days">0</div>
@@ -744,33 +806,33 @@
         </section>
 
         <section class="gallery-section">
-            <h2 class="gallery-title">Notre nouvelle vie</h2>
+            <h2 class="gallery-title">Mon amour pour toi</h2>
             <div class="gallery">
                 <div class="gallery-item">
-                    <i class="fas fa-baby"></i>
-                    <h3>Notre petit ange</h3>
-                    <p>Une nouvelle vie qui grandit en toi, un amour infini qui nous unit</p>
+                    <i class="fas fa-heart"></i>
+                    <h3>Mon Amour</h3>
+                    <p>Tu es ma raison de vivre, ma lumière dans les moments sombres</p>
                 </div>
                 <div class="gallery-item">
-                    <i class="fas fa-heart"></i>
-                    <h3>Amour éternel</h3>
-                    <p>Notre amour a créé un miracle, une petite étincelle qui deviendra une flamme</p>
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Mon Engagement</h3>
+                    <p>Je promets de faire tout mon possible pour être l'homme que tu mérites</p>
                 </div>
                 <div class="gallery-item">
                     <i class="fas fa-hands-holding-child"></i>
-                    <h3>Famille unie</h3>
-                    <p>Bientôt, nous serons trois à partager nos rires, nos câlins et nos aventures</p>
+                    <h3>Notre Famille</h3>
+                    <p>Je ferai tout pour que notre enfant grandisse dans un foyer plein d'amour</p>
                 </div>
                 <div class="gallery-item">
                     <i class="fas fa-star"></i>
-                    <h3>Rêves d'avenir</h3>
-                    <p>Tous les rêves que nous partageons prendront vie à travers notre enfant</p>
+                    <h3>Notre Futur</h3>
+                    <p>Tous les rêves que nous partageons prendront vie grâce à notre amour</p>
                 </div>
             </div>
         </section>
 
         <footer>
-            <p>Fait avec <i class="fas fa-heart heartbeat"></i> pour la future maman la plus extraordinaire</p>
+            <p>Fait avec <i class="fas fa-heart heartbeat"></i> pour la femme la plus extraordinaire</p>
             <p>© 2025 - Notre belle famille</p>
         </footer>
     </div>
@@ -781,7 +843,7 @@
     
     <div class="music-notification" id="musicNotification">
         <i class="fas fa-music"></i>
-        <span>Musique romantique en cours de lecture...</span>
+        <span>Cliquez n'importe où pour activer la musique</span>
     </div>
     
     <!-- Audio element for background music -->
@@ -827,10 +889,10 @@
         const backgroundMusic = document.getElementById('backgroundMusic');
         const volumeSlider = document.getElementById('volumeSlider');
         const musicNotification = document.getElementById('musicNotification');
-        let musicPlaying = true;
+        let musicPlaying = false;
         
         // Initialiser le volume
-        backgroundMusic.volume = 0; // Commence à 0 pour le fondu
+        backgroundMusic.volume = 0;
         
         // Gestion du volume
         volumeSlider.addEventListener('input', () => {
@@ -839,7 +901,7 @@
         
         // Fonction pour fondu entrant du volume
         function fadeInMusic() {
-            const fadeDuration = 3000; // 3 secondes
+            const fadeDuration = 3000;
             const startVolume = 0;
             const endVolume = 0.5;
             const startTime = Date.now();
@@ -882,8 +944,8 @@
             }
         }
         
-        // Démarrer la musique automatiquement
-        document.addEventListener('DOMContentLoaded', () => {
+        // Nouvelle fonction pour gérer la lecture après interaction
+        function initMusicAfterInteraction() {
             backgroundMusic.play()
                 .then(() => {
                     musicPlaying = true;
@@ -891,6 +953,9 @@
                     musicIcon.classList.add('fa-volume-up');
                     fadeInMusic();
                     createMusicNotes();
+                    
+                    // Mettre à jour la notification
+                    musicNotification.innerHTML = '<i class="fas fa-music"></i> Musique romantique en cours de lecture...';
                     
                     // Cacher la notification après 5 secondes
                     setTimeout(() => {
@@ -902,12 +967,19 @@
                 })
                 .catch(error => {
                     console.log("La lecture de la musique a échoué : ", error);
-                    musicNotification.innerHTML = '<i class="fas fa-exclamation-triangle"></i> La lecture automatique a été bloée. Cliquez sur le bouton Musique.';
+                    musicNotification.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Cliquez sur le bouton Musique pour démarrer';
                     musicIcon.classList.remove('fa-volume-up');
                     musicIcon.classList.add('fa-volume-mute');
                     musicPlaying = false;
                 });
-        });
+        }
+
+        // Démarrer la musique après la première interaction
+        document.addEventListener('click', function initMusicOnInteraction() {
+            initMusicAfterInteraction();
+            // Retirer l'écouteur après la première interaction
+            document.removeEventListener('click', initMusicOnInteraction);
+        }, {once: true});
         
         // Gestion du bouton musique
         musicToggle.addEventListener('click', () => {
@@ -935,10 +1007,10 @@
         revealBox.addEventListener('click', () => {
             revealBox.innerHTML = `
                 <div class="reveal-text" style="font-size: 2.8rem; color: var(--accent);">
-                    Nous allons être parents ! <i class="fas fa-heart heartbeat"></i>
+                    Je t'aime plus que tout <i class="fas fa-heart heartbeat"></i>
                 </div>
                 <div style="margin-top: 25px; font-size: 1.4rem; color: var(--text);">
-                    Mon amour, notre famille s'agrandit... Je t'aime plus que tout !
+                    Mon amour, je ferai tout pour réparer mes erreurs et mériter ton pardon
                 </div>
             `;
             
